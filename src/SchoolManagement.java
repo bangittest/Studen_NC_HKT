@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class SchoolManagement {
     public static void main(String[] args) {
         Student[] students = new Student[100];
@@ -20,7 +22,7 @@ public class SchoolManagement {
                                         
                     """);
             System.out.println("Chon");
-            choice = Integer.parseInt(scanner.nextLine());
+            choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
@@ -97,6 +99,9 @@ public class SchoolManagement {
 //                            }
 
                             break;
+                        case 5:
+                        default:
+                            System.out.println("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
                     }
                 case 2:
                     //quan ly mon hoc
@@ -116,7 +121,7 @@ public class SchoolManagement {
                             //them moi mon hoc
                             subjects[subjectIndex]=new Subject();
                             subjects[subjectIndex++].inputData();
-                            System.out.println("them moi thanh cong");
+//                            System.out.println("them moi thanh cong");
                             break;
                         case 2:
                             //danh sach diem
@@ -155,6 +160,11 @@ public class SchoolManagement {
                                 System.out.println("k tim thay mon hoc co id :" +idSubDelete);
                             }
                             break;
+                        case 5:
+                            // Thoát khỏi quản lý học sinh
+                            break;
+                        default:
+                            System.out.println("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
                     }
                 case 3:
                    //menu quan ly diem thi
